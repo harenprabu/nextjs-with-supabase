@@ -39,13 +39,13 @@ const SignIn = () => {
         onSubmit={signIn}
       >
         {({ errors, touched }) => (
-          <Form className="column w-full">
+          <Form>
             <label htmlFor="email">Email</label>
             <Field
               className={cn('input', errors.email && touched.email && 'bg-red-50')}
               id="email"
               name="email"
-              placeholder="jane@acme.com"
+              placeholder="harenprabu@gmail.com"
               type="email"
             />
             {errors.email && touched.email ? (
@@ -63,18 +63,18 @@ const SignIn = () => {
               <div className="text-red-600">{errors.password}</div>
             ) : null}
 
-            <Link href="/reset-password" className="link w-full">
+            <Link href="/reset-password">
               Forgot your password?
             </Link>
 
-            <button className="button-inverse w-full" type="submit">
+            <button type="submit">
               Submit
             </button>
           </Form>
         )}
       </Formik>
       {errorMsg && <div className="text-red-600">{errorMsg}</div>}
-      <Link href="/sign-up" className="link w-full">
+      <Link href="/sign-up" >
         Don&apos;t have an account? Sign Up.
       </Link>
     </div>
