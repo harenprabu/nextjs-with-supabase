@@ -30,8 +30,8 @@ const UpdatePassword = () => {
   }
 
   return (
-    <div className="card">
-      <h2 className="w-full text-center">Update Password</h2>
+    <div ">
+      <h2 >Update Password</h2>
       <Formik
         initialValues={{
           password: '',
